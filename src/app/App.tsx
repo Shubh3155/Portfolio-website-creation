@@ -18,8 +18,15 @@ export default function App() {
     <div className="min-h-screen bg-[#0a0a0a] text-white antialiased selection:bg-amber-300/30 relative">
       <style>{`
         @keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
-        html, body { overscroll-behavior: none; }
+        html, body { 
+          overscroll-behavior: none;
+          -webkit-font-smoothing: antialiased;
+          -webkit-touch-callout: none;
+        }
         section[id] { scroll-margin-top: 80px; }
+        @media (max-width: 768px) {
+          section[id] { scroll-margin-top: 64px; }
+        }
       `}</style>
 
       {!entered && <Portal onEnter={() => setEntered(true)} />}

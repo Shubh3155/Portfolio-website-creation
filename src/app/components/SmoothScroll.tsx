@@ -47,7 +47,7 @@ export function SmoothScroll() {
       const y = e.touches[0].clientY;
       const delta = lastTouchY - y;
       lastTouchY = y;
-      target = clamp(target + delta * 1.6);
+      target = clamp(target + delta * 1.2);
       start();
     };
 

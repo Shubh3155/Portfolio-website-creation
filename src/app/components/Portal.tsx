@@ -44,23 +44,23 @@ export function Portal({ onEnter }: { onEnter: () => void }) {
         <Gear size={320} duration={45} />
       </div>
 
-      <div className="relative text-center px-6">
-        <div className="font-mono-tech text-amber-400/80 tracking-[0.4em] text-[11px] mb-6">
+      <div className="relative text-center px-4 sm:px-6 max-w-full w-full">
+        <div className="font-mono-tech text-amber-400/80 tracking-[0.4em] text-[9px] sm:text-[11px] mb-4 sm:mb-6">
           &gt; initializing system_v2.6
         </div>
 
         <h1
           className="font-display text-white uppercase"
-          style={{ fontSize: "clamp(44px, 8vw, 120px)", lineHeight: 0.95, fontWeight: 600, letterSpacing: "0.02em" }}
+          style={{ fontSize: "clamp(32px, 8vw, 120px)", lineHeight: 0.95, fontWeight: 600, letterSpacing: "0.02em" }}
         >
           SHUBHAM<span className="text-amber-300">_</span>KHATRI
         </h1>
-        <div className="font-mono-tech text-white/50 tracking-[0.5em] text-[12px] mt-4 uppercase">
+        <div className="font-mono-tech text-white/50 tracking-[0.5em] text-[10px] sm:text-[12px] mt-2 sm:mt-4 uppercase">
           // node.0001 — ICE / AI engineer
         </div>
 
-        <div className="mt-12 w-[280px] md:w-[420px] mx-auto font-mono-tech">
-          <div className="flex justify-between text-[10px] tracking-[0.3em] text-white/40 mb-2 uppercase">
+        <div className="mt-8 sm:mt-12 w-full max-w-xs sm:max-w-md mx-auto font-mono-tech px-4 sm:px-0">
+          <div className="flex justify-between text-[9px] sm:text-[10px] tracking-[0.3em] text-white/40 mb-2 uppercase">
             <span>boot_seq</span>
             <span>{Math.floor(progress).toString().padStart(3, "0")}%</span>
           </div>
@@ -70,7 +70,7 @@ export function Portal({ onEnter }: { onEnter: () => void }) {
               style={{ width: `${progress}%` }}
             />
           </div>
-          <div className="mt-3 text-[11px] text-white/40 tracking-[0.2em] uppercase h-4">
+          <div className="mt-3 text-[10px] sm:text-[11px] text-white/40 tracking-[0.2em] uppercase h-4 line-clamp-1">
             {progress < 30 && "> calibrating instruments..."}
             {progress >= 30 && progress < 60 && "> loading neural pathways..."}
             {progress >= 60 && progress < 90 && "> aligning constellations..."}
@@ -82,7 +82,7 @@ export function Portal({ onEnter }: { onEnter: () => void }) {
         <button
           onClick={handleEnter}
           disabled={!ready}
-          className={`font-mono-tech mt-12 group relative px-10 py-4 border tracking-[0.3em] text-[12px] uppercase transition-all duration-500 ${
+          className={`font-mono-tech mt-8 sm:mt-12 group relative px-6 sm:px-10 py-3 sm:py-4 border tracking-[0.3em] text-[11px] sm:text-[12px] uppercase transition-all duration-500 ${
             ready
               ? "border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-black cursor-pointer animate-pulse-soft"
               : "border-white/15 text-white/30 cursor-not-allowed"
