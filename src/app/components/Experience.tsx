@@ -34,7 +34,7 @@ const items = [
     tags: ["Deep Learning", "Image Enhancement", "Transformers", "Super-Resolution"],
   },
   {
-    role: "Joint Secretary",
+    role: "Technology Head",
     org: "IEEE NSUT",
     location: "Delhi, India",
     date: "Apr 2024 — Present",
